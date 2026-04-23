@@ -28,8 +28,8 @@ This project is designed to be highly reproducible. No local data download is re
 4. Click **"Run All"** cells. The notebook will automatically fetch the data from the web and generate all five visualizations.
 
 ## 6. Product Link / Demo
-* **Demo Video Link:** [请在这里替换成你的 Mediasite 视频链接]
-* **GitHub Repository Link:** [请在这里替换成你的 GitHub 仓库链接]
+* **Demo Video Link:** [https://video.xjtlu.edu.cn/Mediasite/MyMediasite/drafts]
+* **GitHub Repository Link:** [https://github.com/mingyanghu-hub/acc102-retail-finance-analysis]
 
 ## 7. Limitations & Next Steps
 * **Limitations:** The current dataset represents a historical snapshot and lacks temporal dynamics. Real estate markets are highly cyclical, and this static data does not account for recent macroeconomic factors such as inflation, mortgage interest rate hikes, or post-pandemic migration trends.
