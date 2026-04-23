@@ -1,32 +1,36 @@
-# ACC102 Data Product: Real Estate Investment Analysis
+# ACC102 Data Product: Real Estate Investment Analysis - California Housing Market
 
 ## 1. Problem & User
-This project analyzes the key drivers of real estate prices to assist a **Real Estate Investment Trust (REIT)** in optimizing their property acquisition strategy. The goal is to understand how location, local income, and property features impact valuations.
+The objective of this data product is to identify the fundamental drivers of real estate prices in the California housing market. The intended user is a **Real Estate Investment Trust (REIT) investment team** looking to optimize their property acquisition strategy by understanding how location, local demographics, and property features impact financial valuations.
 
 ## 2. Data
-* **Source:** California Housing Dataset (fetched directly from Ageron's Hands-on ML GitHub repository via URL).
-* **Access Date:** April 2026.
-* **Key Fields:** `median_house_value`, `median_income`, `ocean_proximity`, `longitude`, `latitude`.
+* **Source:** California Housing Dataset. To ensure seamless reproducibility and avoid local file path errors, the data is fetched directly via a stable URL from the *Hands-on Machine Learning* public repository.
+* **Access Date:** April 2026
+* **Key Fields Used:** `median_house_value` (target variable), `median_income`, `ocean_proximity`, `longitude`, `latitude`, `total_rooms`, and `total_bedrooms`.
 
 ## 3. Methods
-* **Data Loading:** Used `pandas` to read CSV directly via URL for seamless reproducibility.
-* **Data Cleaning:** Imputed missing values in `total_bedrooms` using the median to maintain data integrity against outliers. Created a new feature (`rooms_per_household`).
-* **Analysis & Visualization:** Utilized `matplotlib` and `seaborn` to generate five analytical charts (Histograms, Scatter Maps, Bar Charts, Heatmaps) to uncover correlations.
+This project features a coherent Python-based analytical workflow:
+* **Data Acquisition:** Used `pandas` to read the CSV directly from the web URL.
+* **Data Cleaning & Preparation:** Identified missing values in the `total_bedrooms` column and imputed them using the median to maintain robustness against outliers. 
+* **Feature Engineering:** Created a new metric, `rooms_per_household`, to provide a standardized measure of property size.
+* **Analysis & Visualization:** Utilized `matplotlib` and `seaborn` to generate five analytical charts, including a geographical scatter map (combining coordinates, population, and price), a correlation heatmap, and distribution plots to uncover business insights.
 
 ## 4. Key Findings
-* **Income Correlation:** Median income is the strongest predictor of house value (Correlation coefficient: 0.69).
-* **Geographical Impact:** Prices are highest near the coastlines (Bay Area and Los Angeles clusters).
-* **Category Premium:** Properties categorized as "Near Bay" or "Near Ocean" hold significantly higher average valuations than "Inland" properties.
+1. **Income is the Strongest Predictor:** The correlation heatmap mathematically proves that local median income has the strongest positive correlation (0.69) with housing values.
+2. **The "Location Premium":** Properties categorized as "Island" or "Near Bay" command significantly higher average valuations than "Inland" properties.
+3. **Coastal Value Clusters:** The geographical scatter plot clearly visualizes that the highest value properties are densely clustered along the coastlines (specifically the Los Angeles and Bay Area regions), confirming that geographical proximity to the ocean drives asset value.
 
-## 5. How to run
-1. Ensure you have Python installed along with `pandas`, `numpy`, `matplotlib`, and `seaborn`.
-2. Open `notebook.ipynb` in Jupyter Notebook or JupyterLab.
-3. Run all cells sequentially. No local CSV downloads are required as the script fetches data directly from the web.
+## 5. How to Run
+This project is designed to be highly reproducible. No local data download is required.
+1. Clone or download this repository.
+2. Ensure you have a Python environment installed with the following libraries: `pandas`, `numpy`, `matplotlib`, and `seaborn`.
+3. Open `notebook.ipynb` using Jupyter Notebook or JupyterLab.
+4. Click **"Run All"** cells. The notebook will automatically fetch the data from the web and generate all five visualizations.
 
-## 6. Product link / Demo
-* **Demo Video Link:** [Insert your Mediasite/YouTube link here]
-* **Repository Link:** [Insert this GitHub Repo URL here]
+## 6. Product Link / Demo
+* **Demo Video Link:** [请在这里替换成你的 Mediasite 视频链接]
+* **GitHub Repository Link:** [请在这里替换成你的 GitHub 仓库链接]
 
-## 7. Limitations & next steps
-* **Limitation:** The dataset represents a historical snapshot and does not account for current macroeconomic changes like recent interest rate hikes.
-* **Next Step:** Integrate a predictive machine learning model (e.g., Random Forest) to forecast undervalued properties.
+## 7. Limitations & Next Steps
+* **Limitations:** The current dataset represents a historical snapshot and lacks temporal dynamics. Real estate markets are highly cyclical, and this static data does not account for recent macroeconomic factors such as inflation, mortgage interest rate hikes, or post-pandemic migration trends.
+* **Next Steps:** To improve this product for the REIT investment team, the next step would be to integrate a predictive machine learning model (such as a Random Forest Regressor) to automatically flag undervalued properties in high-income neighborhoods.
